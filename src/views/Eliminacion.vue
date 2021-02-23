@@ -1,0 +1,84 @@
+<template>
+    <div class="eliminacion">
+        <form>
+            <fieldset>
+                <legend>Eliminar Jugador</legend>
+                <select class="equipos" v-model="name">
+                    <option :value="equipos.name" v-for="(equipos, nn) in arrayEquipos" :key="nn">{{equipos.name}}</option>
+                </select>
+                    <EliminarJug class="jugadores" :nombreEquipo="name"></EliminarJug>
+                <button class="boton" @click="borrar()">Eliminar Jugador</button>
+            </fieldset>
+        </form>
+    </div>
+</template>
+
+<script>
+import axios from "axios";
+
+import EliminarJug from '@/components/EliminarJug.vue'
+
+export default {
+    data(){
+        return{
+            arrayEquipos:[],
+            arrayJugadores:[],
+            id:'',
+            name:'',
+            team:'',
+            scores:''
+
+        }
+    },
+    methods:{
+        jugadores(){
+            axios.get('http://localhost:3000/players')
+            .then(response =>{
+                this.arrayJugadores = response.data;
+            } )
+            .catch(response => alert("Errores: " + response.status));
+        },
+        equipos(){
+            axios.get('http://localhost:3000/clubs')
+            .then(response =>{
+                this.arrayEquipos = response.data;
+            } )
+            .catch(response => alert("Errores: " + response.status));
+        },
+        
+        borrar(){
+            axios.delete("http://localhost:3000/players/" + this.id);
+        }
+    },
+    created(){
+            this.equipos();
+            this.jugadores();
+    },
+    components:{
+        EliminarJug
+    }
+}
+</script>
+
+<style scoped>
+    .equipos{
+        float: left;
+        
+    }
+    .jugadores{
+        float: left;
+      
+    }
+    .boton{
+        float: left;
+       
+    }
+    fieldset{
+    margin-top: 10%;
+    margin-right: 60%;
+    background-color: brown;
+}
+legend{
+    font-size: 50px;
+}
+</style>
