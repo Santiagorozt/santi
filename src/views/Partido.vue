@@ -67,8 +67,8 @@ body{
     color: rgb(243, 200, 145);
 }
 fieldset{
-    margin-top: 10%;
-    background-color: brown;
+    
+    background-color: rgba(231, 177, 59, 0.459);
 }
 .jornada{
           text-align: center;
@@ -78,7 +78,7 @@ legend{
 }
 .formulario{
 
-     margin-left: 500px;
+    
     margin-right: 500px;
         
 }

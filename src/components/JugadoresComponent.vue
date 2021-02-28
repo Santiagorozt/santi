@@ -107,6 +107,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
     .clase{
 
@@ -116,7 +117,7 @@ export default {
     }
     .infoJ{
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    margin-top: 10%;
+    
     background-color: brown;
     margin-right: 50%;
 }

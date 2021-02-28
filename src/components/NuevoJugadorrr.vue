@@ -39,30 +39,12 @@ export default {
 </script>
 
 <style scoped>
- fieldset{
-    margin-top: 10%;
-    background-color: brown;
-    margin-right: 70%;
-}
-legend{
+      fieldset{
+      background-color: rgba(231, 177, 59, 0.459);   
+       margin-right: 1100px;
+      }
+      legend{
     font-size: 50px;
 }
-.nombre{
-        float: left;
-}
-.equipo{
-    float: left;
-}
-.goles{
-    float:left;
-}
-.boton{
-     float: left;
-}
-.formulario{
 
-     margin-left: 500px;
-    margin-right: 500px;
-        
-}
 </style>

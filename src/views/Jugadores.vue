@@ -68,4 +68,8 @@ export default {
     .clasificacion{
         margin-right: 700px;
     }
+    td{
+    border: red;
+    background-color: rgba(231, 177, 59, 0.459);
+}
 </style>

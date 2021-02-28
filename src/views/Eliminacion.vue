@@ -59,7 +59,6 @@ export default {
     }
 }
 </script>
-
 <style scoped>
     .equipos{
         float: left;
@@ -74,9 +73,9 @@ export default {
        
     }
     fieldset{
-    margin-top: 10%;
+    
     margin-right: 60%;
-    background-color: brown;
+    background-color: rgba(231, 177, 59, 0.459);
 }
 legend{
     font-size: 50px;

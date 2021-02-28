@@ -15,8 +15,8 @@ export default {
 
 <style scoped>
 fieldset{
-    margin-top: 10%;
-    background-color: brown;
+    margin-top: 0%;
+    background-color: rgba(231, 177, 59, 0.459);
 }
 legend{
     font-size: 50px;
@@ -32,6 +32,9 @@ legend{
 }
 .boton{
      float: left;
+}
+legend{
+    font-size: 50px;
 }
     
 </style>

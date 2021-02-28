@@ -54,22 +54,11 @@ export default {
 </script>
 
 <style scoped>
-.clasificacion{
-    width: 400px;
-    height: 1000px;
-    float: right;
-    margin-top: 100px;
-    float: left;
-}
 
-.componente{
-    width: 400px;
-    height: 1000px;
-    float: right;
-    margin-top: 100px;
-}
+
+
 td{
     border: red;
-    background-color: burlywood;
+    background-color: rgba(231, 177, 59, 0.459);
 }
 </style>
