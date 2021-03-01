@@ -37,8 +37,8 @@ export default {
             array:[],
             round:'',
             date:'',
-            team1:'',
-            team2:''
+            equ1:'',
+            equ2:''
         }
     },
     created(){
