@@ -7,7 +7,8 @@
 
         <table class="table">
 
-            <tr class="filas" v-for="(jugadores, nn) in array" :key="nn" >
+            <tr class="filas" v-for="(jugadores, cla) in array" :key="cla" >
+
                 <td> <button @click="nomb(jugadores.name)"> {{jugadores.name}} </button></td>
             </tr>
 
@@ -43,8 +44,11 @@ export default {
         }
     },
     created(){
-        axios.get('http://localhost:3000/clubs')
+
+        axios.get('http://localhost:3000/clubs')//llamada a la api
+
         .then(response =>{
+
             this.array = response.data;
         } )
         .catch(response => alert("Errores: " + response.status));
@@ -58,7 +62,7 @@ export default {
             this.variable = datos;
         }
     },
-    components:{
+    components:{//componente utiizado
         JugadoresComponent
     }
 }

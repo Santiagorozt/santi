@@ -1,12 +1,16 @@
 <template>
-    <div class="eliminacion">
+    <div class="eliminar">
         <form>
             <fieldset>
                 <legend>Eliminar Jugador</legend>
-                <select class="equipos" v-model="name">
+
+                <select class="equip" v-model="name">
+
                     <option :value="equipos.name" v-for="(equipos, nn) in arrayEquipos" :key="nn">{{equipos.name}}</option>
                 </select>
-                    <EliminarJug class="jugadores" :nombreEquipo="name"></EliminarJug>
+
+                    <EliminarJug class="jugador" :nombreEquipo="name"></EliminarJug>
+
                 <button class="boton" @click="borrar()">Eliminar Jugador</button>
             </fieldset>
         </form>
@@ -22,11 +26,18 @@ export default {
     data(){
         return{
             arrayEquipos:[],
+
+            scores:'',
+
             arrayJugadores:[],
-            id:'',
-            name:'',
+
             team:'',
-            scores:''
+
+            id:'',
+            
+            name:''
+            
+            
 
         }
     },

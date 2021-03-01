@@ -2,18 +2,18 @@
     <div class="equipos">
         <h1>Equipos</h1>
         <table>
-            <tr class="tdd" v-for="(equipos, index) in arrayEquipos" :key="index">
-                <td> {{equipos.name}}
+            <tr class="tdd" v-for="(equi, index) in todosEquipos" :key="index">
+                <td> {{equi.name}}
                     <span>
-                        <ul class="lista" v-for="(jugadores, index) in arrayJugadores" :key="index">
-                            <li v-if="equipos.name == jugadores.team"> {{jugadores.name}} </li>
+                        <ul class="lista" v-for="(jugadores, index) in todosJugadores" :key="index">
+                            <li v-if="equi.name == jugadores.team"> {{jugadores.name}} </li>
                         </ul>
                     </span>
                 </td>
             </tr>
         </table>
     </div>
-    <button class="boton" @click="mostrarComp">Nuevo jugador</button>
+    <button class="boton" @click="mostrarNuevo">Nuevo jugador</button>
 
     <div v-show="show">
         <NuevoJugadorrr/>
@@ -26,21 +26,21 @@ import NuevoJugadorrr from '@/components/NuevoJugadorrr.vue'
 export default {
     data(){
         return{
-            arrayEquipos:[],
-            arrayJugadores:[],
+            todosEquipos:[],
+            todosJugadores:[],
             show:false
         }
     },
      created(){
         axios.get('http://localhost:3000/clubs')
         .then(response =>{
-            this.arrayEquipos = response.data;
+            this.todosEquipos = response.data;
         } )
         .catch(response => alert("Errores: " + response.status)),
     
         axios.get('http://localhost:3000/players')
         .then(response =>{
-            this.arrayJugadores = response.data;
+            this.todosJugadores = response.data;
         } )
         .catch(response => alert("Errores: " + response.status));
     },
@@ -48,7 +48,7 @@ export default {
       NuevoJugadorrr
     },
     methods:{
-        mostrarComp: function(){
+        mostrarNuevo: function(){
             this.show = !this.show;
         }
     }

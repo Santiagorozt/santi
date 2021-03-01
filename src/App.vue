@@ -30,10 +30,13 @@
 #nav {
   
   float: left;
+  background-color: bisque;
 }
 #nav a {
   color: #2c3e50;
   display: block;
+  font-size: 30px;
+
 }
 #nav a.router-link-exact-active {
   color: red

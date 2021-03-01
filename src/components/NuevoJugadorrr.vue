@@ -2,12 +2,19 @@
 <!-- Se renderiza un formulario para insertar un nuevo jugador-->
     <div class="nuevoJugador">
         <form>
+
             <fieldset>
+
                 <legend>Nuevo jugador</legend>
+
                 <input  class="input nombre" type="text" placeholder="nombre jugador" v-model="name"><br><br>
+
                 <input class="input equipo" type="text" placeholder="equipo" v-model="team"><br><br>
+
                 <input class="input goles" type="number" placeholder="goles" v-model="scores"><br><br>
+
                 <button class="boton" @click="datitos()">Enviar</button>
+                
             </fieldset>
         </form>
     </div>
