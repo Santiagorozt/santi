@@ -1,5 +1,5 @@
 <template>
-  <!-- Esta template renderiza la tabla de jugadores con el nombre y el score-->
+  <!-- Esta template renderiza la tabla de   jugadores con el nombre y el score-->
   <div class="contenido">
       <table>
 
